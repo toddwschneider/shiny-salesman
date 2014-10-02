@@ -30,7 +30,7 @@ shinyServer(function(input, output, session) {
   
   one_time_initialization = observe({
     isolate({
-      cty = subset(all_cities, full.name %in% seed_cities)
+      cty = subset(city_choices(), full.name %in% seed_cities)
       cty$n = 1:nrow(cty)
       updateSelectizeInput(session, "cities", selected=cty$full.name)
 
@@ -63,7 +63,7 @@ shinyServer(function(input, output, session) {
     run_annealing_process$suspend()
     
     isolate({
-      cty = subset(all_cities, full.name %in% input$cities)
+      cty = subset(city_choices(), full.name %in% input$cities)
       if (nrow(cty) == 0 | identical(sort(cty$full.name), sort(vals$cities$full.name))) return()
       cty$n = 1:nrow(cty)
       vals$cities = cty
