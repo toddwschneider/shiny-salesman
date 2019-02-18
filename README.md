@@ -1,4 +1,4 @@
-A Shiny app to solve the traveling salesman problem with simulated annealing. Check out the full post here: http://toddwschneider.com/posts/traveling-salesman-with-simulated-annealing-r-and-shiny/
+A Shiny app to solve the traveling salesman problem with simulated annealing. Check out the full post here: https://toddwschneider.com/posts/traveling-salesman-with-simulated-annealing-r-and-shiny/
 
 To run on your local machine, paste the following into your R console:
 
